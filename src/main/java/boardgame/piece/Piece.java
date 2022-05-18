@@ -5,7 +5,7 @@ import boardgame.position.Position;
 
 public class Piece {
 
-    protected Position position;
+    public Position position;
     private Board board;
 
     public Piece(Board board) {
@@ -13,7 +13,7 @@ public class Piece {
         position = null;
     }
 
-    protected Board getBoard() {
+    public Board getBoard() {
         return board;
     }
 }
