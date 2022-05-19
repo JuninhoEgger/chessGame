@@ -1,5 +1,6 @@
 package ui;
 
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 
@@ -51,6 +52,13 @@ public class UI {
         } catch (RuntimeException e) {
             throw new InputMismatchException("ERROR READING ChessPosition. Valid values are from a1 to h8.");
         }
+    }
+
+    public static void printMatch(ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        out.println();
+        out.println("TURN: " + chessMatch.getTurn());
+        out.println("WAITING PLAYER: " + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
