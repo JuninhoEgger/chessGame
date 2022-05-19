@@ -1,6 +1,7 @@
 package chess.pieces.rook;
 
 import boardgame.Board;
+import boardgame.position.Position;
 import chess.ChessPiece;
 import chess.colorenum.Color;
 
@@ -18,6 +19,49 @@ public class Rook extends ChessPiece {
     @Override
     public boolean[][] possibleMoves() {
         boolean[][] matrix = new boolean[getBoard().getRows()][getBoard().getColumns()];
+
+        Position p = new Position(0, 0);
+
+        //ACIMA
+        p.setValues(position.getRow() - 1, position.getColumn());
+        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+            p.setRow(p.getRow() - 1);
+        }
+        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+        }
+
+        //ESQUERDA
+        p.setValues(position.getRow(), position.getColumn() - 1);
+        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+            p.setColumn(p.getColumn() - 1);
+        }
+        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+        }
+
+        //DIREITA
+        p.setValues(position.getRow(), position.getColumn() + 1);
+        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+            p.setColumn(p.getColumn() + 1);
+        }
+        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+        }
+
+        //ABAIXO
+        p.setValues(position.getRow() + 1, position.getColumn());
+        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+            p.setRow(p.getRow() + 1);
+        }
+        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+            matrix[p.getRow()][p.getColumn()] = true;
+        }
+
         return matrix;
     }
 }
