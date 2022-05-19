@@ -7,6 +7,7 @@ import chess.enums.Color;
 import chess.exception.ChessException;
 import chess.pieces.bishop.Bishop;
 import chess.pieces.king.King;
+import chess.pieces.knight.Knight;
 import chess.pieces.pawn.Pawn;
 import chess.pieces.rook.Rook;
 
@@ -194,9 +195,11 @@ public class ChessMatch {
 
     private void initialSetup() {
         placeNewPiece('a', 1, new Rook(board, WHITE));
+        placeNewPiece('b', 1, new Knight(board, WHITE));
         placeNewPiece('c', 1, new Bishop(board, WHITE));
         placeNewPiece('e', 1, new King(board, WHITE));
         placeNewPiece('f', 1, new Bishop(board, WHITE));
+        placeNewPiece('g', 1, new Knight(board, WHITE));
         placeNewPiece('h', 1, new Rook(board, WHITE));
         placeNewPiece('a', 2, new Pawn(board, WHITE));
         placeNewPiece('b', 2, new Pawn(board, WHITE));
@@ -208,9 +211,11 @@ public class ChessMatch {
         placeNewPiece('h', 2, new Pawn(board, WHITE));
 
         placeNewPiece('a', 8, new Rook(board, BLACK));
+        placeNewPiece('b', 8, new Knight(board, BLACK));
         placeNewPiece('c', 8, new Bishop(board, BLACK));
         placeNewPiece('e', 8, new King(board, BLACK));
         placeNewPiece('f', 8, new Bishop(board, BLACK));
+        placeNewPiece('g', 8, new Knight(board, BLACK));
         placeNewPiece('h', 8, new Rook(board, BLACK));
         placeNewPiece('a', 7, new Pawn(board, BLACK));
         placeNewPiece('b', 7, new Pawn(board, BLACK));
