@@ -25,6 +25,11 @@ public class Main {
                 out.println();
                 out.print("SOURCE: ");
                 ChessPosition source = readChessPosition(scanner);
+
+                boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+                clearScreen();
+                printBoard(chessMatch.getPieces(), possibleMoves);
+
                 out.println();
                 out.print("TARGET: ");
                 ChessPosition target = readChessPosition(scanner);
