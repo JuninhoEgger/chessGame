@@ -9,6 +9,7 @@ import chess.pieces.bishop.Bishop;
 import chess.pieces.king.King;
 import chess.pieces.knight.Knight;
 import chess.pieces.pawn.Pawn;
+import chess.pieces.queen.Queen;
 import chess.pieces.rook.Rook;
 
 import java.util.ArrayList;
@@ -197,6 +198,7 @@ public class ChessMatch {
         placeNewPiece('a', 1, new Rook(board, WHITE));
         placeNewPiece('b', 1, new Knight(board, WHITE));
         placeNewPiece('c', 1, new Bishop(board, WHITE));
+        placeNewPiece('d', 1, new Queen(board, WHITE));
         placeNewPiece('e', 1, new King(board, WHITE));
         placeNewPiece('f', 1, new Bishop(board, WHITE));
         placeNewPiece('g', 1, new Knight(board, WHITE));
@@ -213,6 +215,7 @@ public class ChessMatch {
         placeNewPiece('a', 8, new Rook(board, BLACK));
         placeNewPiece('b', 8, new Knight(board, BLACK));
         placeNewPiece('c', 8, new Bishop(board, BLACK));
+        placeNewPiece('d', 8, new Queen(board, BLACK));
         placeNewPiece('e', 8, new King(board, BLACK));
         placeNewPiece('f', 8, new Bishop(board, BLACK));
         placeNewPiece('g', 8, new Knight(board, BLACK));
