@@ -4,7 +4,7 @@ import boardgame.Board;
 import boardgame.piece.Piece;
 import chess.colorenum.Color;
 
-public class ChessPiece extends Piece {
+public abstract class ChessPiece extends Piece {
 
     private Color color;
 
