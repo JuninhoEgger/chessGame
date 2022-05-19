@@ -1,6 +1,4 @@
 
-Y
-)src/main/java/chess/pieces/king/King.java,f\b\fbc9c2837e6794cd356a057e9bb6949d6c036c52
 a
 1src/main/java/chess/exception/ChessException.java,1\2\12b03755d3aeafae22150bbdb0cc398e540a1dd4
 ^
