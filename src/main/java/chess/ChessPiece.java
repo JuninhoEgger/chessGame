@@ -5,6 +5,8 @@ import boardgame.piece.Piece;
 import boardgame.position.Position;
 import chess.enums.Color;
 
+import static chess.ChessPosition.fromPosition;
+
 public abstract class ChessPiece extends Piece {
 
     private Color color;
@@ -16,6 +18,10 @@ public abstract class ChessPiece extends Piece {
 
     public Color getColor() {
         return color;
+    }
+
+    public ChessPosition getChessPosition() {
+        return fromPosition(position);
     }
 
     protected boolean isThereOpponentPiece(Position position) {

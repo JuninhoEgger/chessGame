@@ -8,7 +8,7 @@ public abstract class Piece {
     public Position position;
     private Board board;
 
-    public Piece(Board board) {
+    protected Piece(Board board) {
         this.board = board;
         position = null;
     }
